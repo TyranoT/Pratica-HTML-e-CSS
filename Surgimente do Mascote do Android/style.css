@@ -1,29 +1,65 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url('fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Aquire';
+    src: url(fontes/aquire-font/Aquire-BW0ox.otf) format('opentype');
+}
+
 body {
-    background-color: #FAC9B8;
+    background-color: #818181d2;
+}
+
+
+:root {
+    --cor1: #7eb137;
+    --cor2: #42833a;
+    --cor3: #3a6e3a;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-android: 'Android', cursive;
+    --fonte-destaque: 'Aquire', cursive;
 }
 
 header {
-    background-image: linear-gradient(to bottom, #91CB3E, #53A548, #4C934C);
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor2), var(--cor3));
     font-family: Arial, Helvetica, sans-serif;
-    margin:-10px -10px auto -10px;
-    padding-top: 10px;
+    padding-top: 20px;
+}
+
+* {
+    margin: 0px;
+    font-weight: 500;
 }
 
 header h1{
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.521);
     text-align: center;
     color: white;
+
     margin-top: 10px;
     margin-bottom: 30px;
+
+    font-family: var(--fonte-destaque);
+    font-weight: 600;
 }
 
 header p{
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.521);
     text-align: center;
     color: white;
+
     margin-bottom: 50px;
+
+    font-family: var(--fonte-destaque);
+    font-weight: 500;
 }
 
 header nav{
@@ -33,15 +69,23 @@ header nav{
 nav {
     display: flex;
     justify-content: space-evenly;
+
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.212);
 }
 
 nav a{
     text-align: center;
+    color: white;
+
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    width: 100%;
-    height: 100%;
+
+    width: 200px;
+    height: 25px;
+
+    font-family: var(--fonte-destaque);
+    font-weight: bold;
 }
 
 nav a:link {
@@ -50,15 +94,16 @@ nav a:link {
 }
 
 nav a:visited {
-    color: #24502d;
+    color: white;
     text-decoration: none;
 }
 
 nav a:hover {
     background-color: #91CB3E;
+    color: #24502d;
+
     transition: .3s;
     border-radius: 10px;
-    color: #24502d;
 }
 
 a {
@@ -78,28 +123,57 @@ a:hover {
 
 main {
     background-color: white;
-    margin: auto;
-    width: 70%;
-    height: 70%;
 
-    padding: 15px;
+    margin: auto;
+    margin-bottom: 30px;
+
+    max-width: 1000px;
+    min-width: 300px;
+
+    border-radius: 0px 0px 10px 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 main h1 {
     color: #24502d;
+    font-family: var(--fonte-android);
+
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 
 main h2 {
     background-image: linear-gradient(to right,#91CB3E, #53a54863, #4c934c0a );
     color: #24502d;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    font-family: var(--fonte-android);
 }
 
 main p {
     text-align: justify;
+    text-indent: 30px;
+    line-height: 1.5em;
+    margin: 15px 0px 15px 0px;
 }
 
 main p span {
     color: green;
+    font-weight: bold;
+}
+
+main p strong {
+    background-color:lightgreen;
+    font-weight: bold;
+    padding: 1px;
+}
+
+main p strong > a {
+    color: #193820;
+    font-weight: bold;
 }
 
 .dan img{
@@ -119,28 +193,34 @@ main p span {
 
 .video {
     display: flex;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-}
-
-main .video {
     background-color: #24502d;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    padding-right: 0.5%;
+
+    margin: 0px -15px 0px -15px;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    justify-content: center;
 }
 
 h3 {
     background-color: #4C934C;
     border-radius: 10px 10px 0px 0px;
-    padding: 1%;
-    margin-bottom: -0.5%;
+
+    margin-top: 10px;
+    margin-bottom: -20px;
+
+    padding: 10px;
+
+    font-family: var(--fonte-android);
 }
 
 article {
     background-color: #afceb0;
-    padding: 1%;
+
+    margin-top: 20px;
+
+    padding: 2px 10px 10px 10px;
 }
 
 ul li {
@@ -149,11 +229,11 @@ ul li {
 
 .l1 {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 footer {
     background-color: #91CB3E;
     text-align: center;
-    margin: 20px -8px -20px -8px;
+    margin: 0px;
 }
